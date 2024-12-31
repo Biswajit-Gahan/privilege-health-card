@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
+import MainWrapper from '@/app/main-wrapper/main-wrapper';
 
 const interSans = Inter({
   variable: '--font-inter-sans',
@@ -22,9 +23,9 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${interSans.variable} font-sans antialiased`}>
-        {children}
+    <html lang="en" className="dark">
+      <body className={`${interSans.variable}`}>
+        <MainWrapper>{children}</MainWrapper>
       </body>
     </html>
   );

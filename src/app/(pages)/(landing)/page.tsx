@@ -1,4 +1,4 @@
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
       <p className={'mt-10 text-center'}>
